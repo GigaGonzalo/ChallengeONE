@@ -2,7 +2,6 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="reset.css">
 	<link rel="stylesheet" href="style.css">
 	<title>Cifrado de Mensajes</title>
 </head>
@@ -13,7 +12,89 @@
 	</header>
 
 	<div>
-		<textarea> 
+		<input/>
+		<textarea></textarea>
+		<button id="botnEncriptador" type="button" onclick="Encriptar()">Encriptar</button>
+		<button id="botonDesencriptar" type="button" onclick="Desencriptar()">Desencriptar</button>
 	</div>
+	<script type="text/javascript">
+		var input = document.querySelector("input");
+		var texto;
+		var textarea = document.querySelector("textarea");
+		var array;
+		var textoCriptico;
+		var llavea = ["a","e","i","o","u"];
+		var llaveb = ["ai","enter","imes","ober","ufat"];
+		function Encriptar(){
+			textoCriptico = "";
+			texto = input.value;
+			array = texto.split("");
+			for(var i = 0; i < array.length; i++){
+				for(var u = 0; u <= llavea.length; u++){
+					if(array[i] == llavea[u]){
+						textoCriptico = textoCriptico + llaveb[u];
+						break;
+					}
+					if(u == llavea.length){
+						textoCriptico = textoCriptico + array[i];
+					}
+				}
+			}
+			console.log(textoCriptico);
+			textarea.value = textoCriptico;
+		}
+		function Desencriptar(){
+			var t = "";
+			var n = 0;
+			textoCriptico = "";
+			texto = input.value;
+			array = texto.split("");
+			for(var i = 0 ; i < array.length; i = i + n){
+				for(var u = 0; u < llavea.length ; u++){
+					if(array[i] == llavea[u]){
+					 	n = comparador(array, i , llaveb);
+						textoCriptico = textoCriptico + array[i];
+						break;
+					}
+					if(u == llavea.length-1){
+						textoCriptico = textoCriptico + array[i];
+						n = 1;
+					}
+				}
+			}
+			console.log(textoCriptico);
+			textarea.value = textoCriptico;
+		}
+		function comparador(llave , pos , a){
+			var t;
+			var t1;
+			var t2 = "";
+			var c = 0;
+			console.log(a.length);
+			for(var i = 0; i < a.length; i++){
+				t = a[i];
+				t1 = t.split("");
+				t2 = "";
+				console.log(t);
+				console.log(t1);
+				console.log(t1.length);
+				for(var u = 0 ; u < t1.length ; u ++){
+					t2 = t2 + llave[pos + u];
+					console.log(t2);
+
+					if(t2 == a[i]){
+					c = t1.length;
+					console.log(c);
+					return c;
+					
+					break;
+				}
+				}
+
+			}
+
+			//return c;
+		}
+	</script>
 </body>
 </html>
