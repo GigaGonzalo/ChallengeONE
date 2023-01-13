@@ -1,3 +1,13 @@
+font-family: 'Red Hat Mono', monospace;
 header{
 background: #CCCCCC;
+}
+header h1{
+font-family: Red Hat Mono;
+text-align: center;
+padding-bottom: 15px;
+}
+input{
+width: 380px;
+font-family: Red Hat Mono;
 }
