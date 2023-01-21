@@ -1,10 +1,18 @@
-font-family: 'Red Hat Mono', monospace;
+
 header{
 
 }
 body{
 width: 940px;
 background: #000000;
+font-family: 'Red Hat Mono', monospace;
+margin: 0 auto;
+}
+.icono{
+width: 8%;
+position: relative;
+left: 20px;
+top: 40px;
 }
 header h1{
 font-family: Red Hat Mono;
@@ -32,4 +40,6 @@ color: #ffffff;
 font-family: "Red Hat Mono";
 width: 400px;
 font-size: 36px;
+position: relative;
+margin: 15px 32px;
 }
