@@ -12,7 +12,7 @@ margin: 0 auto;
 width: 8%;
 position: relative;
 left: 20px;
-top: 40px;
+top: 30px;
 }
 header h1{
 font-family: Red Hat Mono;
@@ -20,11 +20,12 @@ text-align: center;
 font-size: 36px;
 padding-bottom: 15px;
 color: #ffffff;
+position: relative;
+bottom: 20px;
 }
 textarea{
 resize: none;
 font-size: 24px;
-width: 400px;
 height: 400px;
 border-width: 8px;
 border-color: #04f100;
@@ -32,14 +33,27 @@ background: #000000;
 color: #ffffff;
 margin: 20px;
 }
+#textEntrada{
+width: 500px;
+}
+#textSalida{
+width: 300px;
+}
 button{
 border-width: 5px;
 border-color: #04f100;
 background: #000000;
 color: #ffffff;
 font-family: "Red Hat Mono";
-width: 400px;
-font-size: 36px;
+width: 250px;
+font-size: 30px;
 position: relative;
-margin: 15px 32px;
+margin: 15px 15px;
+}
+#Copiar{
+margin-left: 50px;
+}
+#rodapie{
+	color: #ffffff;
+	text-align: center;
 }

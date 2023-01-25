@@ -16,10 +16,11 @@
 	</header>
 
 	<div>
-		<textarea id="textEntrada"></textarea>
-		<textarea id="textSalida"></textarea>
+		<textarea id="textEntrada" placeholder= "⇉ Ingrese el texto solamente en minusculas y sin ningun caracter especial"></textarea>
+		<textarea id="textSalida" placeholder=""></textarea>
 		<button id="botnEncriptador" type="button" onclick="Encriptar()">Encriptar</button>
 		<button id="botonDesencriptar" type="button" onclick="Desencriptar()">Desencriptar</button>
+		<button id="Copiar" type="button" onclick="CopiarTexto()">Copiar</button>
 	</div>
 	<script type="text/javascript">
 		var input = document.querySelector("#textEntrada");
@@ -45,6 +46,7 @@
 				}
 			}
 			console.log(textoCriptico);
+			input.value = "";
 			textarea.value = textoCriptico;
 		}
 		function Desencriptar(){
@@ -67,6 +69,7 @@
 				}
 			}
 			console.log(textoCriptico);
+			input.value = "";
 			textarea.value = textoCriptico;
 		}
 		function comparador(llave , pos , a){
@@ -97,6 +100,16 @@
 
 			}
 		}
+		function CopiarTexto(){
+			let copyText = document.querySelector("#textSalida");
+  			copyText.select();
+  			document.execCommand("copy");
+		}
 	</script>
 </body>
+<footer>
+
+<p id="rodapie"> Desarrollado por Gonzalo de Jesus Barajas Aguiñaga </p>
+
+</footer>
 </html>
